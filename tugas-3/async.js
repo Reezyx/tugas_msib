@@ -13,3 +13,14 @@ function exercisePromise(age) {
     }
   });
 }
+
+const getData = async () => {
+  try {
+    let result = await exercisePromise(21);
+    console.log(result);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+getData();

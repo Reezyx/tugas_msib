@@ -10,3 +10,14 @@
     2. Key dan value harus sama persis, untuk key yang menggunakan spasi, kamu dapat mengubahnya menjadi snake case atau menggunakan '' untuk key nya
     3. Tampilkan data object tersebut pada terminal
 */
+let biodata = {
+  nama: "Budiawan",
+  umur: 15,
+  tanggal_lahir: "12/01/2005",
+  tempat_tinggal: "Jalan Mawar Putih",
+  domisili: "Bekasi",
+  status: "Jomblo",
+  pendidikan: "universitas",
+};
+
+console.log(biodata);
