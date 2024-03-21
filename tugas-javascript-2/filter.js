@@ -48,3 +48,10 @@ var reports = [
     score: 70,
   },
 ];
+
+let lulus = reports.filter((student) => {
+  return student.score >= 70;
+});
+
+console.log(`Siswa-siswa yang lulus`);
+console.log(lulus);

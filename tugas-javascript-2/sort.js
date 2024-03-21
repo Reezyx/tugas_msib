@@ -5,3 +5,9 @@
 */
 
 var arr = [100, 8, 29, 10, 35, 28, 1, 5, 8, 28, 70, 83, 20, 95, 10];
+
+arr.sort((a, b) => {
+  return b - a;
+});
+
+console.log(arr);
