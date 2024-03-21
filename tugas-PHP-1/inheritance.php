@@ -16,48 +16,68 @@
 */
 
 
-class Ikan
-{
+class Ikan {
     protected $warna;
     protected $berat;
 
-    public function __construct($warna, $berat)
-    {
+    public function __construct($warna, $berat) {
         $this->warna = $warna;
         $this->berat = $berat;
     }
 
-    public function getWarna()
-    {
+    public function getWarna() {
         return $this->warna;
     }
-    public function setWarna($value)
-    {
+
+    public function setWarna($value) {
         $this->warna = $value;
     }
 
-    public function getBerat()
-    {
+    public function getBerat() {
         return $this->berat;
     }
     
-    public function setBerat($value)
-    {
+    public function setBerat($value) {
         $this->berat = $value;
     }
 
-    public function makan($food)
-    {
+    public function makan($food) {
         var_dump("Ikan Memakan " . $food);
     }
 }
 
 
+class Hiu extends Ikan {
+    private $jenis;
 
-// $hiu1 = new Hiu("Hitam", 500, "Tiger Shark");
-// $hiu2 = new Hiu("Merah", 200, "Unknown Shark");
+    public function __construct($warna, $berat, $jenis) {
+        parent::__construct($warna, $berat);
+        $this->jenis = $jenis;
+    }
 
-// $hiu1->kejarTarget("Salmon");
-// $hiu1->makan("Salmon");
+    public function getJenis() {
+        return $this->jenis;
+    }
 
-// $hiu1->getJenis();
+    public function setJenis($value) {
+        $this->jenis = $value;
+    }
+
+    public function makan($food) {
+        var_dump("Hiu Memangsa " . $food);
+    }
+
+    public function kejarTarget($value) {
+        var_dump("Hiu sedang mengejar " . $value);
+    }
+}
+
+
+$hiu1 = new Hiu("Hitam", 500, "Tiger Shark");
+$hiu2 = new Hiu("Merah", 200, "Unknown Shark");
+
+$hiu1->kejarTarget("Salmon");
+$hiu1->makan("Salmon");
+
+echo $hiu1->getJenis();
+?>
