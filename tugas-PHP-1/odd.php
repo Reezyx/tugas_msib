@@ -10,7 +10,11 @@
 
 function printOdd($fact)
 {
-    // Buat Code kamu disini
+    for ($i=0; $i <= $fact ; $i++) { 
+        if ($i % 2 != 0) {
+            var_dump($i);
+        }
+    }
 }
 
 
