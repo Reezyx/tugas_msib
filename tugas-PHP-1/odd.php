@@ -8,13 +8,15 @@
 */
 
 
-function printOdd($fact)
+
+
+function printOdd($limit)
 {
-    // Buat Code kamu disini
+    for ($i = 1; $i <= $limit; $i += 2) {
+        var_dump($i);
+    }
 }
-
-
-
 printOdd(45);
+
 
 // Jalankan Test diatas jika sudah selesai
