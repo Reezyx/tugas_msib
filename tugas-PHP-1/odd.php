@@ -10,6 +10,12 @@
 
 function printOdd($fact)
 {
+    for($i=1; $i <= $fact; $i+=2){
+    var_dump ($i);
+    
+    
+}
+
     // Buat Code kamu disini
 }
 

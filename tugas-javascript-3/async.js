@@ -13,3 +13,14 @@ function exercisePromise(age) {
     }
   });
 }
+
+async function test() {
+  try {
+    const result = await exercisePromise(11);
+    console.log(result);
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+test();
