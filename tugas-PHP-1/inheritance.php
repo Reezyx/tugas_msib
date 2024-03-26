@@ -52,12 +52,39 @@ class Ikan
     }
 }
 
+class Hiu extends Ikan{
+    private $jenis;
 
+    public function makan($food)
+    {
+        var_dump("Hiu Memangsa " . $food);
+    }
 
-// $hiu1 = new Hiu("Hitam", 500, "Tiger Shark");
-// $hiu2 = new Hiu("Merah", 200, "Unknown Shark");
+    public function __construct($warna, $berat, $jenis)
+    {
+        parent::__construct($warna, $berat);
+        $this->jenis = $jenis;
+    }
 
-// $hiu1->kejarTarget("Salmon");
-// $hiu1->makan("Salmon");
+    public function getJenis()
+    {
+        return $this->jenis;
+    }
 
-// $hiu1->getJenis();
+    public function setJenis($jenis)
+    {
+        $this->jenis = $jenis;
+    }
+
+    public function kejarTarget($target)
+    {
+        var_dump('Hiu mengejar ' . $target);
+    }
+
+}
+$hiu1 = new Hiu("Hitam", 500, "Tiger Shark");
+$hiu2 = new Hiu("Merah", 200, "Unknown Shark");
+
+$hiu1->kejarTarget("Salmon");
+$hiu1->makan("Salmon");
+var_dump($hiu1->getJenis());
